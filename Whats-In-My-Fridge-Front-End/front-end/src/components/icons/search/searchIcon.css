@@ -1,0 +1,9 @@
+.SearchIcon {
+    position: static;
+    width: 23px;
+    height: 25px;
+    left: 10px;
+    top: 24px;
+    align-self: center;
+    margin: 10px;
+}

@@ -1,0 +1,49 @@
+.InputBar {
+    top: 18.87%;
+    bottom: 18.87%;
+    flex-grow: 1;
+    outline: none;
+    margin: 20px;
+    height: 100%;
+    padding: 0px;
+    border-width: 0;
+    font-family: Biotif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 33px;
+    /* identical to box height */
+
+    display: flex;
+    align-items: center;
+
+    color: #282828;
+
+
+    /* Inside Auto Layout */
+
+    order: 0;
+    align-self: center;
+}
+
+.InputBar ::placeholder {
+    color: #BFBFBF;
+    opacity: 1;
+}
+
+.InputBarContainer {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+
+    position: static;
+    width: 849px;
+    height: 53px;
+    left: 63px;
+    top: 20px;
+
+    flex: none;
+    order: 1;
+    align-self: center;
+    margin: 10px 0px;
+}

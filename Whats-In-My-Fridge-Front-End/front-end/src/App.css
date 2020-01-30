@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+
+/*@font-face {
+  font-family: 'Biotif-Bold';
+  src: url('fonts/Biotif-Bold.ttf');
+}
+
+.font-biotifBold {
+  font-family: 'Biotif-Bold', -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", sans-serif;
+}
+*/
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
