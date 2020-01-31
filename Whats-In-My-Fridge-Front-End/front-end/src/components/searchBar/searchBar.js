@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React, { Component, useState, useEffect } from "react";
 import SearchBarStyle from './searchBar.css';
 import Button from '../button/button';
@@ -7,8 +8,13 @@ import SearchIcon from '../icons/search/searchIcon';
 const SearchBar = (props) => {
 
     const [ingredients, setIngredients] = useState()
+    const [recipes, setRecipes] = useState(1)
 
     useEffect(() => {}, [ingredients])
+
+    useEffect(() => {
+      props.passRecipes(recipes)
+    }, [recipes])
 
     const inputChanged = (e) => {
       console.log("input changed");
@@ -16,9 +22,26 @@ const SearchBar = (props) => {
     }
 
     const buttonClick = () => {
-      props.buttonClicked(ingredients)
+      console.log("pressed find recipes");
+      getRecipeFromIngredients(ingredients);
+      /*console.log(response);
+      props.passRecipes(response);*/
     }
-    
+
+    const getRecipeFromIngredients = (ingredients) => axios.get(`http://localhost:8080/cookbook/${ingredients}`)
+    .then(response => {
+      console.log("from method getRecipeFromIngredients", response.data)
+      return response.data
+    }).then(data => {
+      setRecipes(data)
+    }).catch((error) => {
+      console.log(error)
+      /*if (error.response && error.response.status === 404) {
+                return `\u2014`;
+      };*/
+    });
+
+
 
     return (
     <div className="Rectangle">
