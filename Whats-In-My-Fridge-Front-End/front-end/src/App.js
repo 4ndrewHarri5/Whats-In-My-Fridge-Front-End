@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import Classes from './App.css';
-import Button from './components/button/button';
 import SearchBar from "./components/searchBar/searchBar";
 import Recipe from './components/recipe/recipe';
 
@@ -465,7 +464,6 @@ class App extends Component {
     ] }
   }
 
-
   gotRecipesHandler = async(passedRecipes) => {
     await this.setState({recipes: passedRecipes});
     console.log(this.state.recipes);
@@ -475,19 +473,17 @@ class App extends Component {
 
     let recipeDisplay = null;
 
-    /*recipeDisplay = (
+    recipeDisplay = (
       <div>
         {this.state.recipes.map((recipe, index) => { 
-          return <Recipe 
-            name={recipe.title} 
-            image={recipe.image}
-            age={recipe.image}
-            key={recipe.id}
-            changed={(event) => this.nameChangedHandler(event, recipe.uID)}
+        return <Recipe
+          name={recipe.title} 
+          image={recipe.image}
+          key={recipe.id}
           />
         })}
       </div>
-    );*/
+    );
 
     return (
       <div className={Classes.App}>
