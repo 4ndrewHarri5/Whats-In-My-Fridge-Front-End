@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, useState, useEffect } from "react";
 import SearchBarStyle from './searchBar.css';
 import Button from '../button/button';
 import InputBar from '../inputBar/inputBar';
@@ -6,12 +6,19 @@ import SearchIcon from '../icons/search/searchIcon';
 
 const SearchBar = (props) => {
 
-    let ingredients;
+    const [ingredients, setIngredients] = useState()
+
+    useEffect(() => {}, [ingredients])
 
     const inputChanged = (e) => {
-      console.log(e.type, " ==> ", e.detail.tagify.value.map(item => item.value));
-      ingredients = e.detail.tagify.value.map(item => item.value).join(',');
+      console.log("input changed");
+      setIngredients(e.detail.tagify.value.map(item => item.value).join(','));
     }
+
+    const buttonClick = () => {
+      props.buttonClicked(ingredients)
+    }
+    
 
     return (
     <div className="Rectangle">
@@ -23,7 +30,7 @@ const SearchBar = (props) => {
         initalValue = {[]}
         ></InputBar>
         <Button
-          onClick={() => console.log("button clicked")}
+          onClick={buttonClick}
           type="button"
           buttonStyle="btn--primary--solid"
           buttonSize="btn--large"

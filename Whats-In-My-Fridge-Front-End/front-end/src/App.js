@@ -3,17 +3,25 @@ import Classes from './App.css';
 import Button from './components/button/button';
 import SearchBar from "./components/searchBar/searchBar";
 
+
 class App extends Component {
 
-  inputChangedHandler = (e) => {
-    console.log(e.type, " ==> ", e.detail.tagify.value.map(item => item.value));
+  constructor(props) {
+    super(props)
+    this.state = { ingredients: '' };
+  }
+
+
+  inputChangedHandler = (passedIngredients) => {
+    this.setState({ingredients: passedIngredients})
+    console.log(this.state.ingredients);
   };
 
   render() {
     return (
       <div className={Classes.App}>
           <SearchBar
-          inputChanged={(event) => this.inputChangedHandler(event)}
+          buttonClicked={this.inputChangedHandler}
           ></SearchBar>
       </div>
     );
