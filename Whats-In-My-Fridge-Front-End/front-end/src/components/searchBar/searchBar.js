@@ -6,23 +6,33 @@ import SearchIcon from '../icons/search/searchIcon';
 
 const SearchBar = (props) => {
 
-      return (
-      <div className="Rectangle">
-        <div className="SearchBarStack">
-          <SearchIcon></SearchIcon>
-          <InputBar></InputBar>
-          <Button
-            onClick={() => console.log("button clicked")}
-            type="button"
-            buttonStyle="btn--primary--solid"
-            buttonSize="btn--large"
-          >
-            Find Recipes
-          </Button>
-        </div>
+    let ingredients;
+
+    const inputChanged = (e) => {
+      console.log(e.type, " ==> ", e.detail.tagify.value.map(item => item.value));
+      ingredients = e.detail.tagify.value.map(item => item.value).join(',');
+    }
+
+    return (
+    <div className="Rectangle">
+      <div className="SearchBarStack">
+        <SearchIcon></SearchIcon>
+        <InputBar 
+        inputChanged={inputChanged}
+        suggestions = {[]}
+        initalValue = {[]}
+        ></InputBar>
+        <Button
+          onClick={() => console.log("button clicked")}
+          type="button"
+          buttonStyle="btn--primary--solid"
+          buttonSize="btn--large"
+        >
+          Find Recipes
+        </Button>
       </div>
-      )
-  
+    </div>
+    )
 }
 
 export default SearchBar

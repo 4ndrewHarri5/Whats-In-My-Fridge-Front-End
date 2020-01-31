@@ -1,9 +1,10 @@
 .InputBar {
-    top: 18.87%;
-    bottom: 18.87%;
     flex-grow: 1;
+}
+
+tags.InputBar {
+    margin-left: 10px;
     outline: none;
-    margin: 20px;
     height: 100%;
     padding: 0px;
     border-width: 0;
@@ -31,6 +32,7 @@
     opacity: 1;
 }
 
+
 .InputBarContainer {
     display: flex;
     flex-direction: row;
@@ -46,4 +48,9 @@
     order: 1;
     align-self: center;
     margin: 10px 0px;
+}
+
+.InputBar .tagify__input {
+    margin: 10px;
+    padding: 0%;
 }

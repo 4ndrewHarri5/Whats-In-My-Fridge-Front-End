@@ -13,14 +13,17 @@ const baseTagifySettings = {
     callbacks: {}
 };
 
-const InputBar = ({ label, name, initialValue = [], suggestions = [] }) => {
-    const handleChange = e => {
+const InputBar = (props) => {
+    const handleChange = props.inputChanged;
+    
+    
+    /*e => {
         console.log(e.type, " ==> ", e.detail.tagify.value.map(item => item.value));
-    };
+    };*/
 
     const settings = {
         ...baseTagifySettings,
-        whitelist: suggestions,
+        whitelist: props.suggestions,
         callbacks: {
         add: handleChange,
         remove: handleChange,
@@ -35,7 +38,8 @@ const InputBar = ({ label, name, initialValue = [], suggestions = [] }) => {
     };
 
     return (
-        <Tags className="InputBar" settings={settings} initialValue={initialValue} />
+        <Tags className="InputBar" settings={settings} initialValue={props.initialValue} />
+        //<input className="InputBar" placeholder="ajsfhs"></input>
     );
 
 }
