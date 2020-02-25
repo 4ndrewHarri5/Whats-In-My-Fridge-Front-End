@@ -7,7 +7,7 @@ const InputBar = (props) => {
 
     const Icon = {
         backgroundImage: 'url('+SearchIcon+')',
-        backgroundSize: '100% 100%',
+        //backgroundSize: '100% 100%',
     };
 
 

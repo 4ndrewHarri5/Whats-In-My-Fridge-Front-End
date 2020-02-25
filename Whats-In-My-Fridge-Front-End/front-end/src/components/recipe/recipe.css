@@ -1,11 +1,21 @@
+.RecipesContainer {
+    align-content: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 0px;
+    position: relative;
+}
+
 .Recipe {
     width: 50%;
     margin: 16px auto;
     border: 1px solid #eee;
-    box-shadow: 0 0px 20px rgba(0, 0, 0, 0.1);
+    background: #FFFFFF;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.08);
+    border-radius: 6px;
     padding: 16px;
     text-align: center;
-    border-radius: 15px;
 }
 
 @media (min-width: 500px) {

@@ -1,7 +1,8 @@
 import React, { Component } from "react";
-import Classes from './App.css';
+import './App.css';
 import SearchBar from "./components/searchBar/searchBar";
 import Recipe from './components/recipe/recipe';
+import './components/recipe/recipe.css';
 
 class App extends Component {
 
@@ -474,7 +475,7 @@ class App extends Component {
     let recipeDisplay = null;
 
     recipeDisplay = (
-      <div>
+      <div className='RecipesContainer'>
         {this.state.recipes.map((recipe, index) => { 
         return <Recipe
           name={recipe.title} 
@@ -486,11 +487,11 @@ class App extends Component {
     );
 
     return (
-      <div className={Classes.App}>
+      <div className='App'>
           <SearchBar
           passRecipes={this.gotRecipesHandler}
           ></SearchBar>
-          {recipeDisplay}
+          {/*recipeDisplay*/}
       </div>
     );
   }

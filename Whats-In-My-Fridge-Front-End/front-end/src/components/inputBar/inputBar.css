@@ -1,9 +1,11 @@
 .InputBar {
     flex-grow: 1;
+    overflow: scroll;
+    overflow-wrap: break-word;
+    margin: 0px 10px 0 0;
 }
 
 tags.InputBar {
-    margin-left: 10px;
     outline: none;
     height: 100%;
     padding: 0px;
@@ -13,6 +15,7 @@ tags.InputBar {
     font-weight: bold;
     font-size: 24px;
     line-height: 33px;
+    flex-wrap: nowrap;
     /* identical to box height */
 
     display: flex;
@@ -38,19 +41,19 @@ tags.InputBar {
     flex-direction: row;
     padding: 10px;
 
-    position: static;
-    width: 849px;
+    position: relative;
+    max-width: 849px;
     height: 53px;
     left: 63px;
     top: 20px;
-
-    flex: none;
+    
     order: 1;
     align-self: center;
     margin: 10px 0px;
 }
 
 .InputBar .tagify__input {
+    white-space: nowrap;
     margin: 10px;
     padding: 0%;
 }

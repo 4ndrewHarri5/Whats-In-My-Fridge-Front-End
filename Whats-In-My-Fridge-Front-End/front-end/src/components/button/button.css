@@ -8,6 +8,7 @@
   }
   
   .btn {
+    position: relative;
     font-family: Biotif;
     font-style: normal;
     font-weight: bold;

@@ -12,4 +12,11 @@
 .App {
   font-family: sans-serif;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+
+  max-width: 1000px;
+  margin: auto;
+  padding-top: 64px;
+  width: 80vw;
 }

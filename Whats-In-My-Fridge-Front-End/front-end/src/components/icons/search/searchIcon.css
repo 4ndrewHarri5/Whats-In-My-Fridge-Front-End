@@ -1,4 +1,5 @@
 .SearchIcon {
+    background-size: contain;
     position: static;
     width: 23px;
     height: 25px;
