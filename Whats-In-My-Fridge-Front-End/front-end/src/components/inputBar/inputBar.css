@@ -10,6 +10,7 @@ tags.InputBar {
     height: 100%;
     padding: 0px;
     border-width: 0;
+    text-align: left;
     font-family: Biotif;
     font-style: normal;
     font-weight: bold;

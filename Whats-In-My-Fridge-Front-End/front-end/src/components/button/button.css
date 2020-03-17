@@ -8,6 +8,10 @@
   }
   
   .btn {
+    flex: 0 0 38%;
+    max-width: 210px;
+    word-wrap: break-word;
+    overflow: hidden;
     position: relative;
     font-family: Biotif;
     font-style: normal;
